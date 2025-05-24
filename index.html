@@ -1,76 +1,5 @@
-<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>REJKT.xyz Feed and Filter System Documentation - v0.1.0</title><meta name="description" content="Documentation for REJKT.xyz Feed and Filter System Documentation"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script><script async src="assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">REJKT.xyz Feed and Filter System Documentation - v0.1.0</a><div id="tsd-toolbar-links"><a href="modules.html">Modules</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>REJKT.xyz Feed and Filter System Documentation - v0.1.0</h1></div><div class="tsd-panel tsd-typography"><h1 id="rejktxyz-feed-and-filter-system-documentation" class="tsd-anchor-link">REJKT.xyz Feed and Filter System Documentation<a href="#rejktxyz-feed-and-filter-system-documentation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>This documentation provides a comprehensive overview of the feed and filter systems in REJKT.xyz.</p>
-<h2 id="system-overview" class="tsd-anchor-link">System Overview<a href="#system-overview" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>REJKT.xyz implements multiple feed types with different approaches to displaying NFT content:</p>
-<h3 id="feed-types" class="tsd-anchor-link">Feed Types<a href="#feed-types" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>Main Feed</th>
-<th>Artist Feed</th>
-<th>Gallery Feed</th>
-<th>Single Artist Feed</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Data Focus</strong></td>
-<td>Listings</td>
-<td>Artist profiles</td>
-<td>Tokens</td>
-<td>Artist portfolio</td>
-</tr>
-<tr>
-<td><strong>Filter Support</strong></td>
-<td>Full</td>
-<td>Full</td>
-<td>None</td>
-<td>Limited</td>
-</tr>
-<tr>
-<td><strong>Pagination</strong></td>
-<td>ID-based</td>
-<td>ID-based</td>
-<td>Offset-based</td>
-<td>Offset-based</td>
-</tr>
-<tr>
-<td><strong>Data Model</strong></td>
-<td><code>BaseListing</code></td>
-<td><code>BaseListing</code></td>
-<td><code>GalleryToken</code></td>
-<td>Artist tokens</td>
-</tr>
-<tr>
-<td><strong>UI Component</strong></td>
-<td><code>MediaModal</code></td>
-<td><code>ArtistModal</code></td>
-<td><code>MediaModal</code></td>
-<td><code>MediaModal</code></td>
-</tr>
-<tr>
-<td><strong>Caching Strategy (TTL)</strong></td>
-<td>Short-term (5 min)</td>
-<td>Medium-term (10 min)</td>
-<td>Long-term (15 min)</td>
-<td>Medium-term (10 min)</td>
-</tr>
-<tr>
-<td><strong>Persistence Hook</strong></td>
-<td><code>useMainFeedPersistence</code></td>
-<td><code>useArtistFeedPersistence</code></td>
-<td><code>useGalleryFeedPersistence</code></td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<h3 id="core-architectural-patterns" class="tsd-anchor-link">Core Architectural Patterns<a href="#core-architectural-patterns" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ol>
-<li><strong>Component-Based UI</strong>: React components isolate UI concerns</li>
-<li><strong>Custom React Hooks</strong>: Encapsulate complex business logic</li>
-<li><strong>Provider Pattern</strong>: Global state management</li>
-<li><strong>Repository Pattern</strong>: Data access abstraction</li>
-<li><strong>Optimistic UI Updates</strong>: Update UI before persistence completes</li>
-<li><strong>Lazy Loading</strong>: Defer loading of non-critical components</li>
-<li><strong>Progressive Enhancement</strong>: Graceful degradation when features are unavailable</li>
-</ol>
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>REJKT.xyz Feed and Filter System Documentation - v0.5.4</title><meta name="description" content="Documentation for REJKT.xyz Feed and Filter System Documentation"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script><script async src="assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">REJKT.xyz Feed and Filter System Documentation - v0.5.4</a><div id="tsd-toolbar-links"><a href="modules.html">Modules</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>REJKT.xyz Feed and Filter System Documentation - v0.5.4</h1></div><div class="tsd-panel tsd-typography"><h1 id="rejktxyz-feed--filter-documentation" class="tsd-anchor-link">REJKT.xyz Feed &amp; Filter Documentation<a href="#rejktxyz-feed--filter-documentation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>This documentation provides a comprehensive overview of the feed and filter systems in REJKT.xyz.</p>
+<h2 id="system-overview" class="tsd-anchor-link">System Overview<a href="#system-overview" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>REJKT.xyz implements multiple feed types with different approaches to displaying NFT content, including Main Feed, Artist Feed, Gallery Feed, and Single Artist Feed. Each feed type has specific characteristics regarding data focus, filtering capabilities, pagination strategy, and persistence mechanisms.</p>
 <h2 id="changelog" class="tsd-anchor-link">Changelog<a href="#changelog" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="v054" class="tsd-anchor-link">v0.5.4<a href="#v054" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li>Added NSFW content filter using _<em>nsfw</em> token metadata attribute</li>
 <li>Added Flashing Hazards filter using _<em>hazards</em> token metadata attribute</li>
@@ -79,20 +8,36 @@
 <li>Enhanced filter synchronization between UI state and cached content</li>
 </ul>
 <h3 id="v053" class="tsd-anchor-link">v0.5.3<a href="#v053" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
-<li>Added art gallery for saved items</li>
-<li>Enhanced filter synchronization between page loads</li>
-<li>Improved feed persistence with database optimization</li>
-<li>Added user interface for managing favorites and saved items</li>
-<li>Fixed issues with filter application and clearing</li>
+<li>Fixed bug where art feed would incorrectly show 'end of feed' after one page</li>
+<li>Improved feed pagination logic for more reliable content loading</li>
+<li>Enhanced home page and Tezos information page with additional content</li>
+<li>Removed filters that were preventing certain FOC art from displaying in feeds</li>
+<li>Added better error handling and retry mechanisms for feed loading</li>
+<li>Improved debug logging for feed loading processes</li>
 </ul>
 <h3 id="v052" class="tsd-anchor-link">v0.5.2<a href="#v052" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
-<li>Added feed persistence and caching</li>
-<li>Improved filter performance</li>
-<li>Added favorites and collection features</li>
-<li>Fixed various UI and performance issues</li>
-<li>Added enhanced artist details</li>
+<li>Added home page and Tezos page for onboarding</li>
+<li>Moved main feed to art page</li>
+<li>Changed all feeds to support tokens without display images, such as FOC art</li>
+<li>Upgraded Reggie component for more functionality</li>
 </ul>
+<h3 id="v051" class="tsd-anchor-link">v0.5.1<a href="#v051" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>Implemented feed persistence</li>
+<li>Improved performance of feed loading</li>
+</ul>
+<h3 id="v05" class="tsd-anchor-link">v0.5<a href="#v05" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>Refactored curation feed to be token based</li>
+<li>Misc. system optimizations</li>
+<li>Regression bug fixes</li>
+</ul>
+<h3 id="v046" class="tsd-anchor-link">v0.4.6<a href="#v046" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>Added FilterResult interface</li>
+<li>Enhanced error handling</li>
+<li>Improved filter UX</li>
+<li>Toggled filter button &amp; dropdown behavior based on user feedback</li>
+</ul>
+<h3 id="earlier-versions" class="tsd-anchor-link">Earlier Versions<a href="#earlier-versions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Earlier versions included initial development of feed systems, filter implementations, artist profiles, mobile UI improvements, performance optimizations, and core platform features.</p>
 <h2 id="integration-diagram" class="tsd-anchor-link">Integration Diagram<a href="#integration-diagram" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code><span class="hl-0">┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐</span><br/><span class="hl-0">│  </span><span class="hl-1">User</span><span class="hl-0"> </span><span class="hl-1">Interaction</span><span class="hl-0">│────▶│    </span><span class="hl-1">Filter</span><span class="hl-0"> </span><span class="hl-2">UI</span><span class="hl-0">    │────▶│  </span><span class="hl-1">Filter</span><span class="hl-0"> </span><span class="hl-1">State</span><span class="hl-0">   │</span><br/><span class="hl-0">└─────────────────┘     └─────────────────┘     └────────┬────────┘</span><br/><span class="hl-0">                                                        │</span><br/><span class="hl-0">┌─────────────────┐                                     ▼</span><br/><span class="hl-0">│  </span><span class="hl-1">Render</span><span class="hl-0"> </span><span class="hl-1">Results</span><span class="hl-0">  │◀───┐                      ┌─────────────────┐</span><br/><span class="hl-0">└─────────────────┘    │                       │ </span><span class="hl-1">Feed</span><span class="hl-0"> </span><span class="hl-1">Component</span><span class="hl-0">  │</span><br/><span class="hl-0">                      │                       └────────┬────────┘</span><br/><span class="hl-0">┌─────────────────┐    │    ┌─────────────────┐        │</span><br/><span class="hl-0">│ </span><span class="hl-1">Persistence</span><span class="hl-0"> </span><span class="hl-1">Layer</span><span class="hl-0">│◀───┴────│</span><span class="hl-1">Filter</span><span class="hl-0"> </span><span class="hl-1">Application</span><span class="hl-0">│◀───────┴────────┐</span><br/><span class="hl-0">└───────┬─────────┘         └─────────────────┘                  │</span><br/><span class="hl-0">        │                                                        │</span><br/><span class="hl-0">        ▼                                                        │</span><br/><span class="hl-0">┌─────────────────┐                              ┌───────────────┴─┐</span><br/><span class="hl-0">│ </span><span class="hl-1">IndexedDB</span><span class="hl-0"> </span><span class="hl-1">Store</span><span class="hl-0"> │                              │   </span><span class="hl-2">API</span><span class="hl-0"> </span><span class="hl-1">Query</span><span class="hl-0">     │</span><br/><span class="hl-0">└─────────────────┘                              └─────────────────┘</span>
 </code><button>Copy</button></pre>
 
-</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#rejktxyz-feed-and-filter-system-documentation"><span>REJKT.xyz <wbr/>Feed and <wbr/>Filter <wbr/>System <wbr/>Documentation</span></a><ul><li><a href="#system-overview"><span>System <wbr/>Overview</span></a></li><li><ul><li><a href="#feed-types"><span>Feed <wbr/>Types</span></a></li><li><a href="#core-architectural-patterns"><span>Core <wbr/>Architectural <wbr/>Patterns</span></a></li></ul></li><li><a href="#changelog"><span>Changelog</span></a></li><li><ul><li><a href="#v054"><span>v0.5.4</span></a></li><li><a href="#v053"><span>v0.5.3</span></a></li><li><a href="#v052"><span>v0.5.2</span></a></li></ul></li><li><a href="#integration-diagram"><span>Integration <wbr/>Diagram</span></a></li></ul></div></details></div><div class="site-menu"><nav id="tsd-sidebar-links" class="tsd-navigation"><a href="modules.html" class="tsd-nav-link">Modules</a></nav><nav class="tsd-navigation"><a href="modules.html">REJKT.xyz Feed and Filter System Documentation - v0.1.0</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div></body></html>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#rejktxyz-feed--filter-documentation"><span>REJKT.xyz <wbr/>Feed &amp; <wbr/>Filter <wbr/>Documentation</span></a><ul><li><a href="#system-overview"><span>System <wbr/>Overview</span></a></li><li><a href="#changelog"><span>Changelog</span></a></li><li><ul><li><a href="#v054"><span>v0.5.4</span></a></li><li><a href="#v053"><span>v0.5.3</span></a></li><li><a href="#v052"><span>v0.5.2</span></a></li><li><a href="#v051"><span>v0.5.1</span></a></li><li><a href="#v05"><span>v0.5</span></a></li><li><a href="#v046"><span>v0.4.6</span></a></li><li><a href="#earlier-versions"><span>Earlier <wbr/>Versions</span></a></li></ul></li><li><a href="#integration-diagram"><span>Integration <wbr/>Diagram</span></a></li></ul></div></details></div><div class="site-menu"><nav id="tsd-sidebar-links" class="tsd-navigation"><a href="modules.html" class="tsd-nav-link">Modules</a></nav><nav class="tsd-navigation"><a href="modules.html">REJKT.xyz Feed and Filter System Documentation - v0.5.4</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div></body></html>
