@@ -1,0 +1,26 @@
+# Jekyll configuration for REJKT Documentation
+title: REJKT.xyz Documentation
+description: Documentation for the REJKT.xyz feed and filter systems
+theme: jekyll-theme-minimal
+baseurl: /rejkt-docs
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+plugins:
+  - jekyll-relative-links
+  - jekyll-seo-tag
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+  - modules.md
+  - classes
+  - interfaces
+  - modules
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
