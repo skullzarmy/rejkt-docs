@@ -1,0 +1,2 @@
+# This file is to fix potential double-paths
+# TypeDoc sometimes creates links with 'modules/modules/' instead of 'modules/'
